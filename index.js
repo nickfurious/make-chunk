@@ -13,6 +13,7 @@ function removeObj(obj, key) {
 
 console.log(removeObj(myObj, 'a'));
 
+// Second approach
 function deleteProperty(myObj, prop) {
   let newObj = {};
   for(let key in myObj) {
@@ -23,4 +24,4 @@ function deleteProperty(myObj, prop) {
   return newObj;
 }
 
-console.log(deleteProperty({a: 1, b: 2,}, 'a'));
+console.log(deleteProperty(myObj, 'b'));
