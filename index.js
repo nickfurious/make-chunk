@@ -1,15 +1,20 @@
-// create an array that has a nested array with the length of the number parameter
-// loop through the array by incrementing a certain number
-// create an array an store enough data to match the length of number pof parameter
-// push those arrays into the empty array 
-// call the empty array and the output and the output should be an array with empty array
+let arr = [33, 21, 14, 3, 21, 21, 334, 579, 34, 565, 4345, 3987, 3];
 
-function makeChunk(data, number) {
-  let nestedArray = [];
-  for(let i = 0; i < data.length; i += number) {
-    nestedArray.push(data.slice(i, i + number));
+for(let i = 0; i < arr.length; i++) {
+  for(let j = i + 1; j < arr.length; j++) {
+    if (arr[i] == arr[j]) {
+      arr.splice(j, 1);
+      j--;
+    }
   }
-  return nestedArray;
 }
+console.log(arr)
 
-console.log(makeChunk([2, 4, 5, 6, 7, 8, 1, 2, 3], 4));
+// Working with splice()
+// var fruits = ["Banana", "Orange", "Apple", "Mango"];
+// document.getElementById("demo").innerHTML = fruits;
+
+// function myFunction() {
+//   fruits.splice(2, 0, "Lemon", "Kiwi");
+//   document.getElementById("demo").innerHTML = fruits;
+// }
